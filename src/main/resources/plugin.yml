@@ -1,0 +1,4 @@
+name: Voidteleport
+version: ${project.version}
+main: biz.mcplay.voidteleport.VoidTeleport
+api-version: 1.13
