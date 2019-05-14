@@ -23,8 +23,8 @@ public final class VoidTeleport extends JavaPlugin implements Listener {
     public void onPlayerMove(PlayerMoveEvent e) {
         Player player = e.getPlayer();
         Location loc = player.getLocation();
-        if (loc.getY() <= 0.0) {
-            e.getPlayer().teleport(getServer().getWorlds().get(0).getSpawnLocation());
+        if(player.getWorld() == getServer().getWorlds().get(0) && loc.getY() <= 0.0) {
+            player.teleport(getServer().getWorlds().get(0).getSpawnLocation());
         }
     }
 }
